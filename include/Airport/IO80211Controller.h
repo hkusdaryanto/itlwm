@@ -141,8 +141,8 @@ public:
     virtual bool terminate(unsigned int) APPLE_KEXT_OVERRIDE;
 #endif
     virtual bool init(OSDictionary *) APPLE_KEXT_OVERRIDE;
-    virtual IOReturn configureReport(IOReportChannelList *,UInt,void *,void *) APPLE_KEXT_OVERRIDE;
-    virtual IOReturn updateReport(IOReportChannelList *,UInt,void *,void *) APPLE_KEXT_OVERRIDE;
+    //virtual IOReturn configureReport(IOReportChannelList *,UInt,void *,void *) APPLE_KEXT_OVERRIDE;
+    //virtual IOReturn updateReport(IOReportChannelList *,UInt,void *,void *) APPLE_KEXT_OVERRIDE;
     virtual bool start(IOService *) APPLE_KEXT_OVERRIDE;
     virtual void stop(IOService *) APPLE_KEXT_OVERRIDE;
     virtual IOService* getProvider(void) const APPLE_KEXT_OVERRIDE;
