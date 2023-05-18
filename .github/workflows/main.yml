@@ -2,7 +2,7 @@ name: CD
 
 on:
   push:
-    branches: airport-legacy
+    branches: airport-legacy-2.2.0
 
 env:
   BUILD_OUTPUT: 'build/Build/Products/Debug'
