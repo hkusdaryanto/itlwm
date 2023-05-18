@@ -45,6 +45,10 @@ jobs:
       run: |
         xcodebuild -scheme "AirportItlwm (all)" -configuration Debug -derivedDataPath build GIT_COMMIT=_${SHORT_SHA} | xcpretty && exit ${PIPESTATUS[0]}
 
+    - name: Build AirportItlwm Legacy
+      run: |
+        xcodebuild -scheme "AirportItlwm-Legacy" -configuration Debug -derivedDataPath build GIT_COMMIT=_${SHORT_SHA} | xcpretty && exit ${PIPESTATUS[0]}
+
     - name: Pack Artifacts
       run: |
         cd $BUILD_OUTPUT
