@@ -88,8 +88,8 @@ class IO80211Interface : public IOEthernetInterface
 
 public:
     virtual void free() APPLE_KEXT_OVERRIDE;
-    virtual IOReturn configureReport(IOReportChannelList *,uint,void *,void *) APPLE_KEXT_OVERRIDE;
-    virtual IOReturn updateReport(IOReportChannelList *,uint,void *,void *) APPLE_KEXT_OVERRIDE;
+    //virtual IOReturn configureReport(IOReportChannelList *,uint,void *,void *) APPLE_KEXT_OVERRIDE;
+    //virtual IOReturn updateReport(IOReportChannelList *,uint,void *,void *) APPLE_KEXT_OVERRIDE;
     virtual bool terminate(unsigned int) APPLE_KEXT_OVERRIDE;
     virtual bool attach(IOService*) APPLE_KEXT_OVERRIDE;
     virtual void detach(IOService*) APPLE_KEXT_OVERRIDE;
