@@ -47,7 +47,7 @@ jobs:
 
     - name: Build AirportItlwm Legacy
       run: |
-        xcodebuild -scheme "AirportItlwm-legacy" -configuration Debug -derivedDataPath build GIT_COMMIT=_${SHORT_SHA} | xcpretty && exit ${PIPESTATUS[0]}
+        xcodebuild -scheme "AirportItlwm-Legacy" -configuration Debug -derivedDataPath build GIT_COMMIT=_${SHORT_SHA} | xcpretty && exit ${PIPESTATUS[0]}
 
     - name: Pack Artifacts
       run: |
