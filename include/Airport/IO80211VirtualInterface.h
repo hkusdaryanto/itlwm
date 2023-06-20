@@ -26,16 +26,18 @@ public:
 #if __IO80211_TARGET >= __MAC_11_0
     virtual bool willTerminate( IOService * provider, IOOptionBits options ) APPLE_KEXT_OVERRIDE;
 #endif
-    //virtual IOReturn configureReport(IOReportChannelList   *channels,
-    //                                 IOReportConfigureAction action,
-    //                                 void                  *result,
-    //                                 void                  *destination)
-    //  APPLE_KEXT_OVERRIDE;
-    //virtual IOReturn updateReport(IOReportChannelList      *channels,
-    //                              IOReportUpdateAction      action,
-    //                              void                     *result,
-    //                              void                     *destination)
-    //  APPLE_KEXT_OVERRIDE;
+#if __IO80211_TARGET >= __MAC_10_9
+    virtual IOReturn configureReport(IOReportChannelList   *channels,
+                                     IOReportConfigureAction action,
+                                     void                  *result,
+                                     void                  *destination)
+      APPLE_KEXT_OVERRIDE;
+    virtual IOReturn updateReport(IOReportChannelList      *channels,
+                                  IOReportUpdateAction      action,
+                                  void                     *result,
+                                  void                     *destination)
+      APPLE_KEXT_OVERRIDE;
+#endif
     virtual bool terminate( IOOptionBits options = 0 ) APPLE_KEXT_OVERRIDE;
     virtual bool attach(IOService *) APPLE_KEXT_OVERRIDE;
     virtual void detach(IOService *) APPLE_KEXT_OVERRIDE;
