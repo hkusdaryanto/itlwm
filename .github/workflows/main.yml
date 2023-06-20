@@ -2,7 +2,7 @@ name: CD
 
 on:
   push:
-    branches: master-legacy-thiker
+    branches: master-legacy
 
 env:
   BUILD_OUTPUT: 'build/Build/Products/Debug'
